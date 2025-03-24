@@ -1,0 +1,23 @@
+[
+    { "id": 1, "name": "Galactic Sword", "price": 299.99, "status": "Legendary", "description": "Forged in a dying star, this blade radiates cosmic energy capable of slicing through dimensions." },
+    { "id": 2, "name": "Stellar Shield", "price": 199.99, "status": "Rare", "description": "A shield crafted from asteroid metal, designed to absorb celestial impacts and repel dark matter." },
+    { "id": 3, "name": "Nebula Armor", "price": 499.99, "status": "Very Rare", "description": "Armor infused with nebula gas clouds, granting stealth and resilience in zero-g battles." },
+    { "id": 4, "name": "Photon Blaster", "price": 149.99, "status": "In Stock", "description": "Energy weapon firing concentrated photon beams. Ideal for close-range skirmishes." },
+    { "id": 5, "name": "Quantum Boots", "price": 89.99, "status": "Low Stock", "description": "Enables short-range quantum jumps, allowing teleportation in battle." },
+    { "id": 6, "name": "Cryo Grenade", "price": 29.99, "status": "In Stock", "description": "Releases freezing mist capable of immobilizing enemies in solid ice." },
+    { "id": 7, "name": "Dark Matter Core", "price": 799.99, "status": "Legendary", "description": "A mysterious core rumored to power ancient spacecrafts." },
+    { "id": 8, "name": "Holo Visor", "price": 59.99, "status": "Out of Stock", "description": "Projects a real-time holographic HUD with mission data overlays." },
+    { "id": 9, "name": "Meteorite Ring", "price": 119.99, "status": "Rare", "description": "Forged from a meteorite, grants slight control over gravitational fields." },
+    { "id": 10, "name": "Solar Flare Gauntlet", "price": 349.99, "status": "Very Rare", "description": "Channels raw solar energy, unleashing plasma bursts." },
+    { "id": 11, "name": "Plasma Katana", "price": 259.99, "status": "Rare", "description": "A katana enveloped in plasma, cutting through metal effortlessly." },
+    { "id": 12, "name": "Wormhole Generator", "price": 999.99, "status": "Legendary", "description": "Generates temporary wormholes for interstellar travel." },
+    { "id": 13, "name": "Ion Disruptor", "price": 169.99, "status": "In Stock", "description": "Emits ionic waves to disable enemy electronics and shields." },
+    { "id": 14, "name": "Starforged Helmet", "price": 139.99, "status": "Very Rare", "description": "Forged from star remnants, enhances vision and protects against flares." },
+    { "id": 15, "name": "Warp Stabilizer", "price": 299.99, "status": "Rare", "description": "Stabilizes warp drives, reducing anomalies during hyperspace jumps." },
+    { "id": 16, "name": "EMP Mine", "price": 49.99, "status": "In Stock", "description": "Deployable mine that emits an EMP blast disabling machinery." },
+    { "id": 17, "name": "Astro Cloak", "price": 219.99, "status": "Low Stock", "description": "Cloak that bends light and heat signatures for near-invisibility." },
+    { "id": 18, "name": "Cosmic Compass", "price": 74.99, "status": "In Stock", "description": "A compass attuned to stellar magnetic fields, guiding explorers." },
+    { "id": 19, "name": "Nano Swarm Canister", "price": 129.99, "status": "Out of Stock", "description": "Releases a nanobot swarm for repairs, sabotage, or scouting." },
+    { "id": 20, "name": "Graviton Boots", "price": 149.99, "status": "Very Rare", "description": "Lets wearer control gravity, enabling wall-walking and super jumps." }
+  ]
+  

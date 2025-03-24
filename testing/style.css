@@ -1,0 +1,365 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, .detail-body {
+    background: radial-gradient(circle at center, #0f0f23 0%, #1b1b3a 100%);
+    background-size: 400% 400%;
+    animation: galaxyFlow 60s ease infinite;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    padding: 40px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+input, select {
+    padding: 12px 18px;
+    border: 2px solid #00ffea;
+    background: rgba(0, 0, 0, 0.7);
+    color: #00ffea;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    animation: subtlePulse 6s infinite ease-in-out;
+}
+
+input:focus, select:focus {
+    box-shadow: 0 0 12px #00ffea;
+    outline: none;
+}
+/* Table Wrapper */
+.table-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 50px rgba(255, 0, 204, 0.2), 0 0 25px rgba(0, 255, 234, 0.15);
+    position: relative;
+    z-index: 1;
+}
+
+/* Table Core */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* Header */
+thead th {
+    background: linear-gradient(90deg, rgba(255, 0, 204, 0.6), rgba(0, 255, 234, 0.4));
+    color: #ffffff;
+    padding: 18px 25px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+/* Body */
+tbody tr {
+    transition: background 0.4s, box-shadow 0.4s;
+}
+
+tbody tr:hover {
+    background: rgba(255, 0, 204, 0.07);
+    box-shadow: inset 0 0 30px rgba(255, 0, 204, 0.1);
+}
+
+/* Cells */
+th, td {
+    padding: 16px 22px;
+    text-align: left;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+
+/* Links inside cells */
+td a {
+    color: #ff66cc;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.4s, text-shadow 0.4s;
+}
+
+td a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 0, 204, 0.8);
+}
+
+/* Smooth lines */
+tr + tr td {
+    border-top: 1px solid rgba(255, 0, 204, 0.1);
+}
+
+/* Rounded bottom corners */
+tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+
+/* Pagination Soft Glow */
+.pagination a {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 0 6px;
+    border: 1px solid rgba(255, 0, 204, 0.6);
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ff66cc;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 12px rgba(255, 0, 204, 0.25);
+    transition: all 0.4s ease;
+}
+
+.pagination a:hover {
+    background: rgba(255, 0, 204, 0.2);
+    color: #fff;
+    box-shadow: 0 0 20px rgba(255, 0, 204, 0.4);
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* Aurora Glow Sweep */
+body::before {
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at center, rgba(255, 0, 204, 0.1) 0%, rgba(0, 0, 0, 0) 80%);
+    animation: auroraSweep 15s ease-in-out infinite;
+    z-index: -2;
+}
+
+/* Floating movement */
+@keyframes floatParticles {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-300px, -300px) scale(1.05); }
+}
+@keyframes floatParticlesReverse {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(300px, 300px) scale(1.02); }
+}
+
+/* Aurora sweep */
+@keyframes auroraSweep {
+    0% { transform: translate(-20%, -20%) rotate(0deg); }
+    50% { transform: translate(20%, 20%) rotate(180deg); }
+    100% { transform: translate(-20%, -20%) rotate(360deg); }
+}
+
+/* Animations */
+@keyframes galaxyFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes floatParticles {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-500px, -500px); }
+}
+
+@keyframes subtlePulse {
+    0% { box-shadow: 0 0 5px #00ffea; }
+    50% { box-shadow: 0 0 15px #00ffea; }
+    100% { box-shadow: 0 0 5px #00ffea; }
+}
+
+@keyframes cosmicGlow {
+    0% { box-shadow: 0 0 10px #00ffea; }
+    50% { box-shadow: 0 0 20px #ff00cc, 0 0 40px #00ffea; }
+    100% { box-shadow: 0 0 10px #00ffea; }
+}
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    background: transparent;
+}
+.product-card {
+    position: relative;
+    background: rgba(10, 10, 30, 0.85);
+    padding: 50px;
+    border: 2px solid rgba(255, 0, 204, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(255, 0, 204, 0.4), 0 0 80px rgba(0, 255, 234, 0.2);
+    text-align: center;
+    max-width: 700px;
+    margin: 80px auto;
+    backdrop-filter: blur(15px);
+    z-index: 2;
+    overflow: hidden;
+}
+
+/* Cosmic glow border */
+.product-card::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    right: -30px;
+    bottom: -30px;
+    background: radial-gradient(circle, rgba(255, 0, 204, 0.1), rgba(0, 0, 0, 0) 60%);
+    border-radius: 30px;
+    z-index: -1;
+    filter: blur(50px);
+    animation: cosmicPulse 8s ease-in-out infinite;
+}
+
+/* Title */
+.product-card h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #ff00cc, #00ffee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 5s infinite linear;
+    text-transform: uppercase;
+}
+
+/* Price */
+.product-card .price {
+    font-size: 1.8em;
+    color: #00ffee;
+    margin: 15px 0;
+    text-shadow: 0 0 10px #00ffee;
+}
+
+/* Status badge */
+.status-badge {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ff00cc, #00ffee);
+    color: #000;
+    font-weight: bold;
+    margin: 15px 0;
+    box-shadow: 0 0 15px #ff00cc;
+}
+
+/* Description */
+.product-card .description {
+    margin: 25px 0;
+    line-height: 1.6;
+    color: #ddd;
+    font-size: 1.1em;
+}
+
+/* Back button */
+.back-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #00ffee, #ff00cc);
+    color: #000;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.4s;
+    box-shadow: 0 0 20px #ff00cc;
+}
+
+.back-button:hover {
+    background: linear-gradient(90deg, #ff00cc, #00ffee);
+    color: #fff;
+    box-shadow: 0 0 30px #00ffee;
+    transform: scale(1.05);
+}
+
+/* Cosmic Pulse Animation */
+@keyframes cosmicPulse {
+    0% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.05); }
+    100% { opacity: 0.3; transform: scale(1); }
+}
+
+/* Shine Text Animation */
+@keyframes shine {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+/* Base badge style */
+.status-badge {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 15px 0;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    font-size: 0.9em;
+    transition: all 0.3s;
+}
+
+/* Legendary */
+.status-badge.legendary {
+    background: linear-gradient(135deg, #ffbf00, #ff6f00);
+    color: #000;
+    box-shadow: 0 0 20px #ffbf00;
+}
+
+/* Very Rare */
+.status-badge.very-rare {
+    background: linear-gradient(135deg, #ff00cc, #cc00ff);
+    color: #fff;
+    box-shadow: 0 0 20px #ff00cc;
+}
+
+/* Rare */
+.status-badge.rare {
+    background: linear-gradient(135deg, #00ffee, #00aaff);
+    color: #000;
+    box-shadow: 0 0 20px #00ffee;
+}
+
+/* In Stock */
+.status-badge.in-stock {
+    background: linear-gradient(135deg, #00ff88, #00cc66);
+    color: #000;
+    box-shadow: 0 0 20px #00ff88;
+}
+
+/* Low Stock */
+.status-badge.low-stock {
+    background: linear-gradient(135deg, #ffff33, #ffaa00);
+    color: #000;
+    box-shadow: 0 0 20px #ffaa00;
+}
+
+/* Out of Stock */
+.status-badge.out-of-stock {
+    background: linear-gradient(135deg, #ff0033, #cc0000);
+    color: #fff;
+    box-shadow: 0 0 20px #ff0033;
+}
