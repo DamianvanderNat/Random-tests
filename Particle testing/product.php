@@ -32,11 +32,11 @@ foreach ($products as $p) {
 <body class="detail-body">
     <?php if ($product): ?>
         <div class="product-card">
-            <h1><?php echo htmlspecialchars($product['name']); ?></h1>
-            <p class="price">$<?php echo htmlspecialchars($product['price']); ?></p>
-            <span class="status-badge"><?php echo htmlspecialchars($product['status']); ?></span>
-            <p class="description"><?php echo htmlspecialchars($product['description']); ?></p>
-            <a href="test-table.php" class="back-button">⬅ Back to the shop</a>
+            <h1><?= htmlspecialchars($product['name']); ?></h1>
+            <p class="price">$<?= htmlspecialchars($product['price']); ?></p>
+            <span class="status-badge"><?= htmlspecialchars($product['status']); ?></span>
+            <p class="description"><?= htmlspecialchars($product['description']); ?></p>
+            <a href="table.php" class="back-button">⬅ Back to the shop</a>
         </div>
     <?php else: ?>
         <p class="not-found">Product not found. <a href="table.php" class="back-button">Back to the shop</a></p>

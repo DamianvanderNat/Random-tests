@@ -54,14 +54,14 @@ $currentItems = array_slice($products, $startIndex, $itemsPerPage);
         <tbody>
             <?php foreach ($currentItems as $product): ?>
                 <tr>
-                    <td><a href="test-product.php?id=<?php echo $product['id']; ?>"><?php echo htmlspecialchars($product['name']); ?></a></td>
-                    <td>$<?php echo htmlspecialchars($product['price']); ?></td>
+                    <td><a href="product.php?id=<?= $product['id']; ?>"><?= htmlspecialchars($product['name']); ?></a></td>
+                    <td>$<?= htmlspecialchars($product['price']); ?></td>
                     <td>
-                        <span class="status-badge <?php echo strtolower(str_replace(' ', '-', $product['status'])); ?>">
-                            <?php echo htmlspecialchars($product['status']); ?>
+                        <span class="status-badge <?= strtolower(str_replace(' ', '-', $product['status'])); ?>">
+                            <?= htmlspecialchars($product['status']); ?>
                         </span>
                     </td>
-                    <td><?php echo htmlspecialchars($product['description']); ?></td>
+                    <td><?= htmlspecialchars($product['description']); ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
@@ -70,7 +70,7 @@ $currentItems = array_slice($products, $startIndex, $itemsPerPage);
 
     <div class="pagination">
         <?php for ($i = 1; $i <= $totalPages; $i++): ?>
-            <a href="?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+            <a href="?page=<?= $i; ?>"><?= $i; ?></a>
         <?php endfor; ?>
     </div>
 
